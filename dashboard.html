@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Nuri Studio – Dashboard</title>
+  <meta charset="UTF-8">
+  <title>Nuri Studio – Live Score Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,17 +13,27 @@
   <div class="score-big" id="score">0/0</div>
   <div class="overs" id="overs">0.0 overs</div>
 
+  <!-- SCORE BUTTONS -->
   <div class="buttons">
     <button onclick="run(1)">+1</button>
     <button onclick="run(4)">+4</button>
     <button onclick="run(6)">+6</button>
     <button onclick="wicket()">Wicket</button>
     <button onclick="ball()">Ball</button>
-    <button onclick="resetMatch()">Reset</button>
   </div>
 
-  <p>OBS Live Link</p>
-  <input id="obsLink" readonly>
+  <!-- CORRECTION / UNDO -->
+  <div class="buttons" style="margin-top:10px">
+    <button onclick="undoRun(1)">−1</button>
+    <button onclick="undoRun(4)">−4</button>
+    <button onclick="undoRun(6)">−6</button>
+    <button onclick="undoWicket()">−Wicket</button>
+    <button onclick="undoBall()">−Ball</button>
+  </div>
+
+  <!-- OBS LINK -->
+  <p style="margin-top:15px">OBS Live Link</p>
+  <input id="obsLink" readonly style="width:100%;padding:8px;text-align:center">
   <button onclick="copyOBSLink()">Copy OBS Link</button>
 </div>
 
