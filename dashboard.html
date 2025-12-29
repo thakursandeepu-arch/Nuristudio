@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Score Dashboard</title>
+  <title>Nuri Studio – Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2 id="title"></h2>
+<div class="main-box">
+  <h2 id="teams">Team A vs Team B</h2>
 
-<button onclick="run(1)">+1 Run</button>
-<button onclick="run(4)">+4</button>
-<button onclick="run(6)">+6</button>
-<button onclick="wicket()">Wicket</button>
+  <div class="score-big" id="score">0/0</div>
+  <div class="overs" id="overs">0.0 overs</div>
 
-<p id="score"></p>
+  <div class="buttons">
+    <button onclick="run(1)">+1</button>
+    <button onclick="run(4)">+4</button>
+    <button onclick="run(6)">+6</button>
+    <button onclick="wicket()">Wicket</button>
+    <button onclick="ball()">Ball</button>
+    <button onclick="resetMatch()">Reset</button>
+  </div>
+
+  <p>OBS Live Link</p>
+  <input id="obsLink" readonly>
+  <button onclick="copyOBSLink()">Copy OBS Link</button>
+</div>
 
 <script src="script.js"></script>
 </body>
